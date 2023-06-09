@@ -3,11 +3,11 @@ from twilio.twiml.voice_response import VoiceResponse, Gather
 import openai
 import time
 
-# Twilio hesap bilgilerini girin
+# Twilio hesap bilgileri
 account_sid = 'AC32935cb895df3e9b022e4d74e1df11f8'
 auth_token = '56c77194b6e26c5873880d7e9ceba15a'
 twilio_phone_number = '+13614597471'
-twiml_url="https://fe23-151-135-107-170.ngrok-free.app/voice"
+twiml_url="https://a68b-5-46-240-88.ngrok-free.app/voice"
 openAi_key="bf5b957b0b564581ae2840150f2874b3"
 initial_message="Sen yeni araba arayan bir yapay zeka asistanısın ve ben araba satıcısıyım bana bununla ilgili kısa  sorular sor tek cümlelik olsun sorular."
 initial_message_2="Sen  almak için araba arayan bir yapay zeka asistanısın ve ben araba satıcısıyım bana bununla ilgili tek cümlelik sorular"
@@ -156,7 +156,10 @@ def stream():
 @app.route('/voice', methods=['POST'])  
 def voice():
     response = VoiceResponse()
-    make_outbound_call("+905318246769")
+    prefix='+'
+    phone_number=str(request.args.get('phone'))
+    phone=prefix+phone_number.strip()
+    make_outbound_call(phone)
     first_message_initial=azure_gpt_api(initial_message_2)
     gather = Gather(input="speech", action_on_empty_result="true" ,timeout=20, language="tr-TR", action="/process_speech", method="POST")
     gather.say(message=first_message_initial.choices[0].message.content, voice="Polly.Filiz",language="tr-TR")
@@ -167,5 +170,12 @@ def voice():
 def process_speech_route():
     print("proceess_speech_route")
     return process_speech_request()
+@app.route('/test_url', methods=['POST'])
+def process_speech_route1():
+    prefix='+'
+    phone_number=str(request.args.get('phone'))
+    phone=prefix+phone_number.strip()
+    print(phone)
+    return str(phone_number)
 if __name__ == '__main__':
     app.run(debug=True)

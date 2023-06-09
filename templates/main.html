@@ -7,36 +7,20 @@
     <script type='text/javascript'>
 
         function callme(){
-        //This promise will resolve when the network call succeeds
-        //Feel free to make a REST fetch using promises and assign it to networkPromise
         var networkPromise = fetch('/get_file')
           .then(response => response.text())
           .then(data => {
             console.log(data);
-    
-            //
-            // Set guage code
-            //
-    
             document.getElementById("chat").innerHTML=data
     
-            //
-            // End set guage code
-            //
-    
           });;
-    
-    
-        //This promise will resolve when 2 seconds have passed
         var timeOutPromise = new Promise(function(resolve, reject) {
-          // 2 Second delay
           setTimeout(resolve, 10000, 'Timeout Done');
         });
     
         Promise.all(
         [networkPromise, timeOutPromise]).then(function(values) {
           console.log("Atleast 2 secs + TTL (Network/server)");
-          //Repeat
           callme();
         });
         }
