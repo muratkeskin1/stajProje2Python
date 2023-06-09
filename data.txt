@@ -1,0 +1,75 @@
+user Sesin gidiyor.bot {
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Tamam, anlad\u0131m. \u0130yi g\u00fcnler dilerim.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685355071,
+  "id": "chatcmpl-7LU8FpcMbZvyqu0fM5Bhnm9jqumCF",
+  "model": "gpt-35-turbo",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 15,
+    "prompt_tokens": 15,
+    "total_tokens": 30
+  }
+}user Alobot {
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "ha!\n\nHello! How can I assist you today?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685355132,
+  "id": "chatcmpl-7LU9EUA9lpXD3OQ9xtCYmG7nqYmfL",
+  "model": "gpt-35-turbo",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 11,
+    "prompt_tokens": 10,
+    "total_tokens": 21
+  }
+}user Noneuser ï¿½yi gï¿½nlerbot {
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\u0130yi g\u00fcnler dilerim! Size nas\u0131l yard\u0131mc\u0131 olabilirim?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685355438,
+  "id": "chatcmpl-7LUEA23KAWZBma8na1FnkW6MKLDLA",
+  "model": "gpt-35-turbo",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 19,
+    "prompt_tokens": 12,
+    "total_tokens": 31
+  }
+}user deneme
+bot deneme
+user deneme
+bot test
+user: birincisi 
+bot: , lï¿½tfen sorunuzu tamamlayï¿½n. Bï¿½ylece size yardï¿½mcï¿½ olmak iï¿½in daha iyi bir ï¿½ekilde hazï¿½rlanabilirim. 
+user: Sesim geliyor mu? 
+user: çok bilmiyorum Alo 
+bot: Merhaba, ben bir yapay zeka dil modeliyim. Sana ne konuda yardýmcý olabilirim? 
+user: None 
+bot: Ben bir yapay zeka olduðum için sesim yoktur. Ancak size yardýmcý olmak için buradayým, nasýl yardýmcý olabilirim? 
+user: None 
+user: None 
+user: None 
+user: None 
