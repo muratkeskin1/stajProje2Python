@@ -70,7 +70,7 @@ def azure_gpt_api(message):
 
     openai.api_type = "azure"
 
-    openai.api_base = "https://interntprojectgpt.openai.azure.com/"
+    openai.api_base = ""
 
     openai.api_version = "2023-03-15-preview"
 
@@ -78,7 +78,7 @@ def azure_gpt_api(message):
 
     response = openai.ChatCompletion.create(
 
-    engine="azuregpt",  
+    engine="",  
 
     messages = [{"role":"user","content":message}],
 
