@@ -81,15 +81,15 @@ def azure_gpt_api(message):
 
     openai.api_type = "azure"
 
-    openai.api_base = "https://interntprojectgpt.openai.azure.com/"
+    openai.api_base = "/"
 
     openai.api_version = "2023-03-15-preview"
 
-    openai.api_key ="bf5b957b0b564581ae2840150f2874b3"
+    openai.api_key =""
 
     response = openai.ChatCompletion.create(
 
-    engine="azuregpt",  
+    engine="",  
 
     messages = [{"role":"user","content":message}],
 
