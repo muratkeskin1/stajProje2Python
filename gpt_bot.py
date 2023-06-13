@@ -4,11 +4,11 @@ import openai
 import time
 
 # Twilio hesap bilgileri
-account_sid = 'AC32935cb895df3e9b022e4d74e1df11f8'
-auth_token = '56c77194b6e26c5873880d7e9ceba15a'
-twilio_phone_number = '+13614597471'
-twiml_url="https://a68b-5-46-240-88.ngrok-free.app/voice"
-openAi_key="bf5b957b0b564581ae2840150f2874b3"
+account_sid = ''
+auth_token = ''
+twilio_phone_number = ''
+twiml_url=""
+openAi_key=""
 initial_message="Sen yeni araba arayan bir yapay zeka asistanısın ve ben araba satıcısıyım bana bununla ilgili kısa  sorular sor tek cümlelik olsun sorular."
 initial_message_2="Sen  almak için araba arayan bir yapay zeka asistanısın ve ben araba satıcısıyım bana bununla ilgili tek cümlelik sorular"
 # Kullanıcıdan gelen sesli girişi işleyen fonksiyon
