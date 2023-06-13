@@ -39,10 +39,10 @@ def voice():
     return process_voice_request(request)
 # Telefon aramasını gerçekleştiren fonksiyon
 def make_phone_call():
-    account_sid = 'AC5c6f128cdc17f83fe09bad7a5cbfbfdb'
-    auth_token = 'd76733046a480d37d71d30a47e6867e0'
-    from_number = '+12543543707'
-    to_number = '+905318246769'
+    account_sid = ''
+    auth_token = ''
+    from_number = '+'
+    to_number = '+'
 
     client = Client(account_sid, auth_token)
 
@@ -94,15 +94,15 @@ def azure_gpt_api(message):
 
     openai.api_type = "azure"
 
-    openai.api_base = "https://interntprojectgpt.openai.azure.com/"
+    openai.api_base = "/"
 
     openai.api_version = "2023-03-15-preview"
 
-    openai.api_key ="bf5b957b0b564581ae2840150f2874b3"
+    openai.api_key =""
 
     response = openai.ChatCompletion.create(
 
-    engine="azuregpt",  
+    engine="",  
 
     messages = [{"role":"user","content":message}],
 
